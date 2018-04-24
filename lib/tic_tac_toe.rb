@@ -44,7 +44,11 @@ def turn(board)
   input = gets.strip
   index = input_to_index(input)
   if valid_move?(board, index)
+<<<<<<< HEAD
     move(board, index, current_player(board))
+=======
+    move(board, index, character = "X")
+>>>>>>> be156f194dc8a578c4d8a152cfc5407c283e6dd7
     display_board(board)
   else
     turn(board)
@@ -131,6 +135,7 @@ def winner(board)
 end
 
 def play(board)
+<<<<<<< HEAD
   until over?(board) == true
     turn(board)
   end
@@ -142,5 +147,12 @@ def play(board)
     end
   elsif draw?(board) == true
     puts "Cat's Game!"
+=======
+  input = turn(board)
+  counter = 0
+  until counter == 9
+    turn(board)
+    counter += 1
+>>>>>>> be156f194dc8a578c4d8a152cfc5407c283e6dd7
   end
 end
